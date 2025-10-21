@@ -22,7 +22,8 @@
         <!-- ---------------- Main Page ------------------>
         <div class="mode main hide" id="mode-main">
             <div id="home" class="home-container">
-
+                <h1 class="title firstLine">Joyeux Anniversaire Esther 🎉</h1>
+                <h1 class="title secondLine">25 Ans, c'est pas rien 👴</h1>
 
                 <button class="button launch" id="button-launch">Lancer des confettis 🎉</button>
                 <button class="button fall" id="button-fall">Pluie de confettis 🎉</button>
@@ -35,14 +36,34 @@
                 <div id="confettis" class="confettis-container">
                     <canvas id="confettis-canvas" class="confettis-canvas"></canvas>
                 </div>
+
+                <div id="arrow-next" class="arrow next"><i class="fa-solid fa-arrow-down"></i></div>
             </div>
             
             <div id="text" class="text-container">
-                <p>Joyeux Anniversaire 🎉</p>
+                <p>
+                    Eh beh, ça y est, t'es vieille 😝 <br>
+                    Nan plus sérieusement, Joyeux Anniversaire Sterouille 🥳😇 !!!<br>
+                    J'espère que ce cadeau te plaira,<br>tu pourras y accéder quand tu veux :) !<br>
+                    Une surprise t'attend à la page suivante !<br>
+                    <br>
+                    Encore une fois, Joyeux Anniversaire !!!<br>
+                    J'espère que ces quelques jours réunis<br>
+                    te feront plaisir !<br>
+                    <br>
+                    Ton frère qui t'aime ❤️
+                </p>
+
+                <div id="arrow-prev" class="arrow prev"><i class="fa-solid fa-arrow-up"></i></div>
+                <div id="arrow-next" class="arrow next"><i class="fa-solid fa-arrow-down"></i></div>
             </div>
 
             <div id="images" class="images-container">
-                <p>Joyeux Anniversaire 🎉</p>
+                <img src="" alt="" class="image" id="image">
+                <div id="arrow-nex-image" class="arrow next-image"><i class="fa-solid fa-arrow-right"></i></div>
+                <div id="arrow-prev-image" class="arrow prev-image"><i class="fa-solid fa-arrow-left"></i></div>
+
+                <div id="arrow-prev" class="arrow prev"><i class="fa-solid fa-arrow-up"></i></div>
             </div>
         </div>
 
@@ -51,5 +72,78 @@
 
         <script type="module" src="js/main.js"></script>
 
+        <!-- ---------------- Preload ---------------- -->
+        <link rel="preload" href="images/20190723_131044.jpg" as="image">
+        <link rel="preload" href="images/20190725_201644.jpg" as="image">
+        <link rel="preload" href="images/20190725_210007.jpg" as="image">
+        <link rel="preload" href="images/20190725_210149.jpg" as="image">
+        <link rel="preload" href="images/20210716_214424.jpg" as="image">
+        <link rel="preload" href="images/20210718_213301.jpg" as="image">
+        <link rel="preload" href="images/20210718_213304.jpg" as="image">
+        <link rel="preload" href="images/20210718_213306.jpg" as="image">
+        <link rel="preload" href="images/20210806_104948.jpg" as="image">
+        <link rel="preload" href="images/20210807_125631.jpg" as="image">
+        <link rel="preload" href="images/20210808_111759.jpg" as="image">
+        <link rel="preload" href="images/20210808_111810.jpg" as="image">
+        <link rel="preload" href="images/20210808_112529.jpg" as="image">
+        <link rel="preload" href="images/20210808_112539 (1).jpg" as="image">
+        <link rel="preload" href="images/20210808_112615.jpg" as="image">
+        <link rel="preload" href="images/20210811_221723.jpg" as="image">
+        <link rel="preload" href="images/20210816_113704.jpg" as="image">
+        <link rel="preload" href="images/20210816_113716.jpg" as="image">
+        <link rel="preload" href="images/20210816_130111.jpg" as="image">
+        <link rel="preload" href="images/20210816_141530.jpg" as="image">
+        <link rel="preload" href="images/20210818_160349.jpg" as="image">
+        <link rel="preload" href="images/20210818_160400.jpg" as="image">
+        <link rel="preload" href="images/20211025_121712.jpg" as="image">
+        <link rel="preload" href="images/20211025_220931.jpg" as="image">
+        <link rel="preload" href="images/20211025_220936.jpg" as="image">
+        <link rel="preload" href="images/20211025_222443.jpg" as="image">
+        <link rel="preload" href="images/20220713_122324.jpg" as="image">
+        <link rel="preload" href="images/20230326_170831.jpg" as="image">
+        <link rel="preload" href="images/20230326_170908.jpg" as="image">
+        <link rel="preload" href="images/20230326_173332.jpg" as="image">
+        <link rel="preload" href="images/20230602_213810.jpg" as="image">
+        <link rel="preload" href="images/20230728_204713.jpg" as="image">
+        <link rel="preload" href="images/20230802_104141.jpg" as="image">
+        <link rel="preload" href="images/20230805_220043.jpg" as="image">
+        <link rel="preload" href="images/20231228_142821.jpg" as="image">
+        <link rel="preload" href="images/IMG-20230129-WA0017.jpg" as="image">
+        <link rel="preload" href="images/IMG-20230303-WA0001.jpg" as="image">
+        <link rel="preload" href="images/IMG-20230507-WA0000.jpg" as="image">
+        <link rel="preload" href="images/IMG-20230507-WA0001.jpg" as="image">
+        <link rel="preload" href="images/IMG-20230507-WA0006.jpg" as="image">
+        <link rel="preload" href="images/IMG-20230702-WA0001.jpg" as="image">
+        <link rel="preload" href="images/IMG-20230716-WA0012.jpg" as="image">
+        <link rel="preload" href="images/IMG-20230722-WA0024.jpg" as="image">
+        <link rel="preload" href="images/IMG-20230727-WA0041.jpg" as="image">
+        <link rel="preload" href="images/IMG-20230727-WA0043.jpg" as="image">
+        <link rel="preload" href="images/IMG-20230731-WA0000.jpg" as="image">
+        <link rel="preload" href="images/IMG-20230731-WA0008.jpg" as="image">
+        <link rel="preload" href="images/IMG-20230731-WA0011.jpg" as="image">
+        <link rel="preload" href="images/IMG-20230731-WA0017.jpg" as="image">
+        <link rel="preload" href="images/IMG-20230808-WA0002.jpg" as="image">
+        <link rel="preload" href="images/IMG-20230809-WA0032.jpg" as="image">
+        <link rel="preload" href="images/IMG-20230809-WA0054.jpg" as="image">
+        <link rel="preload" href="images/IMG-20230809-WA0068.jpg" as="image">
+        <link rel="preload" href="images/IMG-20230809-WA0098.jpg" as="image">
+        <link rel="preload" href="images/IMG-20230813-WA0004.jpg" as="image">
+        <link rel="preload" href="images/IMG-20230813-WA0034.jpg" as="image">
+        <link rel="preload" href="images/IMG-20230813-WA0035.jpg" as="image">
+        <link rel="preload" href="images/IMG-20230816-WA0041.jpg" as="image">
+        <link rel="preload" href="images/IMG-20230822-WA0001.jpg" as="image">
+        <link rel="preload" href="images/IMG-20230827-WA0005.jpg" as="image">
+        <link rel="preload" href="images/IMG-20230827-WA0019.jpg" as="image">
+        <link rel="preload" href="images/IMG-20231202-WA0000.jpg" as="image">
+        <link rel="preload" href="images/IMG-20240322-WA0000.jpg" as="image">
+        <link rel="preload" href="images/IMG-20240501-WA0011.jpg" as="image">
+        <link rel="preload" href="images/IMG-20240501-WA0012.jpg" as="image">
+        <link rel="preload" href="images/IMG-20240501-WA0013.jpg" as="image">
+        <link rel="preload" href="images/Resized_20210816_080959_capture.jpg" as="image">
+        <link rel="preload" href="images/Resized_20210816_105641(1).jpg" as="image">
+        <link rel="preload" href="images/Resized_20210816_113536.jpg" as="image">
+        <link rel="preload" href="images/Resized_20210816_143102.jpg" as="image">
+        <link rel="preload" href="images/Resized_20220807_131815.jpg" as="image">
+        <link rel="preload" href="images/Resized_20220815_171842.jpg" as="image">
     </body>
 </html>
