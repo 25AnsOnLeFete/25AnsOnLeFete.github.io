@@ -1,6 +1,7 @@
 // ----------------- Imports des modules -----------------
 import { confettis } from './confettis.js';
 import { fireworks } from './fireworks.js';
+import { imagesModule } from './images.js';
 
 // ----------------- Fullscreen -----------------
 document.getElementById('fullscreen-toggle').addEventListener('click', toggleFullScreen);
@@ -8,6 +9,24 @@ document.getElementById('fullscreen-toggle').addEventListener('click', toggleFul
 // ----------------- Buttons -----------------
 document.getElementById('button-launch').addEventListener('click', confettis.lancerConfettis);
 document.getElementById('button-fall').addEventListener('click', confettis.pluieConfettis);
+
+// ----------------- Arrows -----------------
+for (const arrow of document.querySelectorAll('#arrow-prev')) {
+    arrow.addEventListener('click', () => {
+        prevPage();
+    })
+}
+for (const arrow of document.querySelectorAll('#arrow-next')) {
+    arrow.addEventListener('click', () => {
+        nextPage();
+    })
+}
+document.getElementById('arrow-nex-image').addEventListener('click', () => {
+    imagesModule.switchImage("next");
+});
+document.getElementById('arrow-prev-image').addEventListener('click', () => {
+    imagesModule.switchImage("prev");
+});
 
 // ----------------- Global Listeners -----------------
 document.addEventListener("fullscreenchange", () => {
@@ -43,7 +62,9 @@ window.addEventListener("load", () => {
         loader.classList.add("hide");
         main.classList.remove("hide");
         main.classList.add("show");
+        snapScroll();
         fireworks.launch();
+        imagesModule.switchImage("next");
     }, 1000);
 });
 
@@ -56,7 +77,7 @@ export function toggleFullScreen() {
     }
 }
 
-window.addEventListener("scroll", () => {
+function snapScroll() {
     const scrollY = window.scrollY || window.pageYOffset;
     const vh = window.innerHeight;
 
@@ -70,4 +91,34 @@ window.addEventListener("scroll", () => {
     window.snapTimeout = setTimeout(() => {
         window.scrollTo({ top: closest, behavior: "smooth" });
     }, 300);
+}
+
+window.addEventListener("scroll", () => {
+    snapScroll();
 });
+
+window.addEventListener("resize", () => {
+    snapScroll();
+});
+
+function prevPage() {
+    const scrollY = window.scrollY || window.pageYOffset;
+    const vh = window.innerHeight;
+
+    const positions = [0, vh, 2 * vh];
+
+    if (scrollY !== positions[0]) {
+        window.scrollTo({ top: scrollY - vh, behavior: "smooth" });
+    }
+}
+
+function nextPage() {
+    const scrollY = window.scrollY || window.pageYOffset;
+    const vh = window.innerHeight;
+
+    const positions = [0, vh, 2 * vh];
+
+    if (scrollY !== positions[2]) {
+        window.scrollTo({ top: scrollY + vh, behavior: "smooth" });
+    }
+}
