@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="stylesheet" href="style/mainStyle.css">
+        <link rel="stylesheet" href="style/loaderStyle.css">
+        <title>Joyeux Anniversaire Esther 🎉</title>
+    </head>
+    <body>
+        <!-- ---------------- Loading Page ---------------- -->
+        <div class="loader show" id="loader">
+            <div class="spinner" id="spinner"></div>
+            <div class="bouncer" id="bouncer">
+                <div id="bouncer-1"></div>
+                <div id="bouncer-2"></div>
+                <div id="bouncer-3"></div>
+            </div>
+        </div>
+
+        <!-- ---------------- Main Page ------------------>
+        <div class="mode main hide" id="mode-main">
+            <div id="home" class="home-container">
+
+
+                <button class="button launch" id="button-launch">Lancer des confettis 🎉</button>
+                <button class="button fall" id="button-fall">Pluie de confettis 🎉</button>
+
+                <div id="fireworks-left" class="fireworks-container classic left"></div>
+                <div id="fireworks-middle" class="fireworks-container classic middle"></div>
+                <div id="fireworks-right" class="fireworks-container classic right"></div>
+                <div id="fireworks-top" class="fireworks-container top"></div>
+
+                <div id="confettis" class="confettis-container">
+                    <canvas id="confettis-canvas" class="confettis-canvas"></canvas>
+                </div>
+            </div>
+            
+            <div id="text" class="text-container">
+                <p>Joyeux Anniversaire 🎉</p>
+            </div>
+
+            <div id="images" class="images-container">
+                <p>Joyeux Anniversaire 🎉</p>
+            </div>
+        </div>
+
+        <!-- ---------------- Buttons ---------------- -->
+        <button class="fullscreen-toggle" id="fullscreen-toggle"><i class="fa-solid fa-expand"></i></button>
+
+        <script type="module" src="js/main.js"></script>
+
+    </body>
+</html>
