@@ -1,0 +1,187 @@
+body {
+    margin:0;
+    width: 100%;
+    height: 100%;
+    transition:all 0.5s ease-in-out;
+    overflow-x: hidden;
+    overflow-y: visible;
+    cursor: default;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-app-region: drag;
+    background: #2A3A4D;
+}
+
+.mode {
+    margin:0;
+    width: 100vw;
+    height: 100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition: all 0.5s ease-in-out;
+}
+
+.images-container, .text-container {
+    position:absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    font-size: 3vw;
+    font-family: 'Gloria Hallelujah', cursive;
+    border-top: 1px solid #042240;
+    border-bottom: 1px solid #042240;
+}
+.text-container {
+    margin-top: 100vh;
+    transform: translateY(50%);
+}
+.images-container {
+    margin-top: 200vh;
+    transform: translateY(100%);
+}
+
+.fireworks-container, .confettis-container {
+    position: absolute;
+    margin:0;
+    pointer-events: none;
+}
+.confettis-container {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+.fireworks-container.classic {
+    width: 30vw;
+    height: 80vh;
+}
+.fireworks-container.top {
+    width: 40vw;
+    height: 100vh;
+    top: 0;
+    left: 30vw;
+}
+.fireworks-container.left {
+    bottom: 0;
+    left: 5vw;
+}
+.fireworks-container.middle {
+    bottom: 0;
+    left: 35vw;
+}
+.fireworks-container.right {
+    bottom: 0;
+    right: 5vw;
+}
+
+.confettis-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.button {
+    position: absolute;
+    z-index: 1;
+    background: #253c52;
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    font-size: 2vw;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.5s ease-in-out;
+    top: 50vh;
+    width: 30vw;
+}
+.button:hover {
+    background-color:#31577b;
+}
+.button.launch {
+    left: 50vw;
+    transform: translate(-125%, -50%);
+}
+.button.fall {
+    right: 50vw;
+    transform: translate(125%, -50%);
+}
+
+.fullscreen-toggle {
+    position: fixed;
+    z-index: 20;
+    background: #253c52;
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    font-size: 1.5vw;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.5s ease-in-out;
+}
+.fullscreen-toggle:hover {
+    background-color:#31577b;
+}
+.fullscreen-toggle {
+    bottom: 3vh;
+    right: 1.5vw;
+}
+
+.body::-webkit-scrollbar {
+    width:0.7vw;
+    height: auto;
+}
+.body::-webkit-scrollbar-track {
+    background: rgba(255,255,255,0.1);
+}
+.body::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.5);
+    border-radius: 10rem;
+}
+.body::-webkit-scrollbar-thumb:hover {
+    background: rgba(255,255,255,0.6);
+}
+
+.hide {
+    opacity: 0;
+    pointer-events:none;
+    user-select: none;
+}
+.hide * {
+    pointer-events:none;
+    user-select: none;
+}
+.show {
+    opacity: 1;
+    pointer-events:visible;
+    user-select: none;
+}
+.show * {
+    pointer-events:visible;
+    user-select: none;
+}
+
+@keyframes bounce {
+    to { transform: translateY(-1vh); opacity: 0.5; }
+}
+@keyframes elastic-spin {
+    0% { transform: rotate(0deg); }
+    60% { transform: rotate(300deg); }
+    100% { transform: rotate(360deg); }
+}
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+@keyframes pulse {
+    from { transform: scale(1); }
+    to   { transform: scale(1.2); }
+}
+@keyframes rainbow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
