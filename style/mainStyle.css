@@ -12,10 +12,15 @@ body {
     background: #2A3A4D;
 }
 
+html, body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
 .mode {
     margin:0;
     width: 100vw;
-    height: 100vh;
+    height: 100dvh; /* hauteur réelle de l’écran */
     display:flex;
     align-items:center;
     justify-content:center;
@@ -92,7 +97,7 @@ body {
     animation: rainbow 10s linear infinite;
 }
 .title.firstLine {
-    font-size: clamp(1.2rem, 7vw, 9rem);
+    font-size: clamp(1.2rem, 6vw, 7rem);
     text-align: center;
     line-height: 2;
     margin: 0;
@@ -100,7 +105,7 @@ body {
     top: 10vh;
 }
 span.secondLine {
-    font-size: clamp(1.2rem, 6vw, 7rem);
+    font-size: clamp(1.2rem, 5vw, 5rem);
     text-align: center;
     margin: 0;
     padding: 0 1rem;
