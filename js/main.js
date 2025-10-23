@@ -77,23 +77,24 @@ export function toggleFullScreen() {
     }
 }
 
-function snapScroll() {
-    const baseHeight = window.innerHeight;
-    const scrollY = window.scrollY || window.pageYOffset;
-    const clampedScroll = Math.max(0, Math.min(scrollY, baseHeight * 2));
-    
-    const positions = [0, baseHeight, baseHeight * 2];
 
-    const closest = positions.reduce((prev, curr) =>
-        Math.abs(curr - clampedScroll) < Math.abs(prev - clampedScroll) ? curr : prev
-    );
+function snapScroll() {
+    const baseHeight = Math.round(document.documentElement.clientHeight);
+    const positions = [0, baseHeight, baseHeight * 2];
+    const scrollY = window.scrollY || document.documentElement.scrollTop;
 
     clearTimeout(window.snapTimeout);
     window.snapTimeout = setTimeout(() => {
-        window.scrollTo({ top: closest, behavior: "smooth" });
-    }, 300);
-};
+        const closest = positions.reduce((prev, curr) =>
+            Math.abs(curr - scrollY) < Math.abs(prev - scrollY) ? curr : prev
+        );
 
+        window.scrollTo({
+            top: closest,
+            behavior: "smooth",
+        });
+    }, 50); // délai court pour laisser finir le scroll naturel
+}
 
 window.addEventListener("scroll", () => {
     snapScroll();
