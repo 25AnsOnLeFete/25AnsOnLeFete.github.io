@@ -66,7 +66,7 @@ body {
 }
 
 .title {
-    z-index: 1000;
+    z-index: 5;
     position: absolute;
     left: 50%;
     width: 100%;
@@ -92,12 +92,18 @@ body {
     animation: rainbow 10s linear infinite;
 }
 .title.firstLine {
-    font-size: 7vw;
+    font-size: clamp(1.2rem, 7vw, 9rem);
+    text-align: center;
+    line-height: 2;
+    margin: 0;
+    padding: 0 1rem;
     top: 10vh;
 }
-.title.secondLine {
-    font-size: 5vw;
-    top: 25vh;
+span.secondLine {
+    font-size: clamp(1.2rem, 6vw, 7rem);
+    text-align: center;
+    margin: 0;
+    padding: 0 1rem;
 }
 
 .arrow {
@@ -108,7 +114,7 @@ body {
     color: #fff;
     font-size: 1.5vw;
     cursor: pointer;
-    z-index: 100;
+    z-index: 10;
     background: #345471;
     border-radius: 50%;
     padding: 0.5em;
@@ -189,7 +195,7 @@ body {
 
 .button {
     position: absolute;
-    z-index: 1;
+    z-index: 10;
     background: #345471;
     color: #fff;
     border: none;
