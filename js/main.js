@@ -122,9 +122,7 @@ function prevPage() {
     const scrollY = window.scrollY || window.pageYOffset;
     const vh = window.innerHeight;
 
-    const positions = [0, vh, 2 * vh];
-
-    if (scrollY !== positions[0]) {
+    if (scrollY !== 0) {
         window.scrollTo({ top: scrollY - vh, behavior: "smooth" });
     }
 }
@@ -133,9 +131,7 @@ function nextPage() {
     const scrollY = window.scrollY || window.pageYOffset;
     const vh = window.innerHeight;
 
-    const positions = [0, vh, 2 * vh];
-
-    if (scrollY !== positions[2]) {
+    if (scrollY !== 2*vh) {
         window.scrollTo({ top: scrollY + vh, behavior: "smooth" });
     }
 }
